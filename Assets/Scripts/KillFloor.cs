@@ -21,12 +21,12 @@ public class KillFloor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //player.transform.position = respawnPoint.transform.position;
-        winLoseScreen.SetActive(true);
-        player.SetActive(false);
-        gameUI.SetActive(false);
-        Cursor.visible = true;
-        TimerController.instance.EndTimer();
+        player.transform.position = respawnPoint.transform.position;
+        //winLoseScreen.SetActive(true);
+        //player.SetActive(false);
+        //gameUI.SetActive(false);
+        //Cursor.visible = true;
+        //TimerController.instance.EndTimer();
         //gameOverText.text = "You lose";
     }
 }

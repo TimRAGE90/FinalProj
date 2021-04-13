@@ -155,6 +155,7 @@ public class PlayerLocomotion : MonoBehaviour
         if(isGrounded)
         {   
             animatorManager.animator.SetBool("isJumping", true);
+            isGrounded = false;
             animatorManager.PlayTargetAnimation("Jumping", false);
                 
             float jumpingVelocity = Mathf.Sqrt(-2 * gravityIntensity * jumpHeight);
