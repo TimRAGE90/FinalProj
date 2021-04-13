@@ -136,7 +136,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (Physics.SphereCast(rayCastOrigin, 0.2f, -Vector3.up, out hit, groundLayer))
         {
-            if (!isGrounded && !playerManager.isInteracting)
+            if (!isGrounded && !playerManager.isInteracting && !isJumping)
             {
                 animatorManager.PlayTargetAnimation("Land", true);
             }
@@ -155,7 +155,6 @@ public class PlayerLocomotion : MonoBehaviour
         if(isGrounded)
         {   
             animatorManager.animator.SetBool("isJumping", true);
-            isGrounded = false;
             animatorManager.PlayTargetAnimation("Jumping", false);
                 
             float jumpingVelocity = Mathf.Sqrt(-2 * gravityIntensity * jumpHeight);

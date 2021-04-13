@@ -8,8 +8,8 @@ public class KillFloor : MonoBehaviour
     //public Transform player;
     public Transform respawnPoint;
 
-    public GameObject winLoseScreen;
-    public GameObject gameUI;
+    //public GameObject winLoseScreen;
+    //public GameObject gameUI;
     public GameObject player;
 
     //public Text gameOverText;

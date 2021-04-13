@@ -431,6 +431,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1687565746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 369000412818044264, guid: e241965c5f8dd704685a5c9d599fb0e8, type: 3}
+  m_PrefabInstance: {fileID: 1791498054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1791498054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -626,7 +631,7 @@ PrefabInstance:
     - target: {fileID: 1262867358365870877, guid: 60df6bbbc91147c49af938066795c362, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1687565746}
     - target: {fileID: 1262867358365870877, guid: 60df6bbbc91147c49af938066795c362, type: 3}
       propertyPath: respawnPoint
       value: 
