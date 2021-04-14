@@ -10,9 +10,9 @@ public class InputManager : MonoBehaviour
     AnimatorManager animatorManager;
     WallRunningManager wallRunningManager;
 
-    public GameObject winLoseScreen;
-    public GameObject gameUI;
-    public GameObject player;
+    //public GameObject winLoseScreen;
+    //public GameObject gameUI;
+    //public GameObject player;
 
     
 
@@ -122,7 +122,7 @@ public class InputManager : MonoBehaviour
         if(jump_Input)
         {
             jump_Input = false;
-            playerLocomotion.HandleJumping();
+            animatorManager.PlayTargetAnimation("Jumping", false);
         }
 
     }
@@ -213,6 +213,7 @@ public class InputManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.tag == "Finish")
         {
             winLoseScreen.SetActive(true);
@@ -221,5 +222,6 @@ public class InputManager : MonoBehaviour
             Cursor.visible = true;
             TimerController.instance.EndTimer();
         }
+        */
     }
 }
