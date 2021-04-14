@@ -72,7 +72,6 @@ public class PauseMenu : MonoBehaviour
     {
         aboutPanel.SetActive(true);
         TurnOff();
-        Debug.Log("You Opened 'About' panel");
     }
 
     public void Back()
@@ -83,8 +82,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnHub()
     {
-        SceneManager.LoadScene("SampleScene");
-        Debug.Log("You Returned to Hub");        
+        Time.timeScale = 1;
+        SceneManager.LoadScene("HubLevel");      
     }
 
     //reset pause panel

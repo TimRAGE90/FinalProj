@@ -11,13 +11,10 @@ public class WinLoseUI : MonoBehaviour
     public void Rerun()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("You Reloaded the Current Scene");
     }
 
-    //change name "SampleScene" to appropriate Hub scene name
     public void ReturnHub()
     {
-        SceneManager.LoadScene("SampleScene");
-        Debug.Log("You Returned to Hub");
+        SceneManager.LoadScene("HubLevel");
     }
 }
