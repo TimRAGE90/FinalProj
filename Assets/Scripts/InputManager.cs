@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
     private float time = 0.0f;
     public Transform target;
     public Transform curvePoint;
-    //public Text thrownObjectText;
+    public Text thrownObjectText;
 
     private void Awake()
     {
@@ -55,12 +55,16 @@ public class InputManager : MonoBehaviour
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
         //Cursor.visible = false;
-        //TimerController.instance.BeginTimer();
-        //thrownObjectText.text = "Holding Ball";
+        thrownObjectText.text = "Holding Ball";
 
         musicSource.clip = mainmusic;
         musicSource.Play();
         musicSource.loop = true;
+    }
+
+    private void Start()
+    {
+        TimerController.instance.BeginTimer();
     }
 
     private void OnEnable()
@@ -159,7 +163,7 @@ public class InputManager : MonoBehaviour
         if (throw_input)
         {
             animatorManager.PlayTargetAnimation("Throwing", true);
-            //thrownObjectText.text = "Ball thrown";
+            thrownObjectText.text = "Ball thrown";
         }
        
     }
@@ -182,7 +186,7 @@ public class InputManager : MonoBehaviour
             obj.position += target.position - obj.position;
             obj.velocity = Vector3.zero;
             obj.isKinematic = true;
-            //thrownObjectText.text = "Holding Ball";
+            thrownObjectText.text = "Holding Ball";
         }
 
         if(isReturning)
