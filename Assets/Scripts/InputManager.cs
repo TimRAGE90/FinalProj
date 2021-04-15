@@ -122,9 +122,18 @@ public class InputManager : MonoBehaviour
         if(jump_Input)
         {
             jump_Input = false;
-            playerLocomotion.HandleJumping();
+            
+            animatorManager.PlayTargetAnimation("Jumping", false);
+            animatorManager.animator.SetBool("isJumping", true);
         }
 
+      
+
+    }
+
+    private void cancelJumping()
+    {
+        animatorManager.animator.SetBool("isJumping", false);
     }
 
     private void HandleSlidingInput()
