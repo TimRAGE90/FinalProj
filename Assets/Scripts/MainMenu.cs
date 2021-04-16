@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
     public GameObject player;
     public GameObject menuCam;
 
+    float timeRemaining = 19;
+    public bool isStarted;
+
 
     void Start()
     {
@@ -23,10 +26,26 @@ public class MainMenu : MonoBehaviour
         player.SetActive(false);
         menuCam.SetActive(true);
         Cursor.visible = true;
+        isStarted = false;
     }
+
+    void Update()
+    {
+        if (isStarted == true)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+        if (timeRemaining <= 0)
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));            
+        }
+    }
+
+    //button navigation
     public void Play()
     {
-        DisableMM();
+        isStarted = true;
+        //DisableMM();
         StartPlayer();
         Cursor.visible = false;
     }
@@ -58,12 +77,13 @@ public class MainMenu : MonoBehaviour
         Debug.Log("You Exited the Game");
     }
 
-
+    //disable main menu
     void DisableMM()
     {
         mainPanel.SetActive(false);
     }
 
+    //begin intro sequence
     void StartPlayer()
     {
         playerCam.SetActive(true);
@@ -71,11 +91,11 @@ public class MainMenu : MonoBehaviour
         menuCam.SetActive(false);
     }
 
+
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
 
     IEnumerator LoadLevel(int levelIndex)
     {
