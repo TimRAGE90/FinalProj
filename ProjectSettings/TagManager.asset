@@ -7,6 +7,13 @@ TagManager:
   - Ground
   - Collectible
   - Door1
+  - HubPit
+  - Door2
+  - Door3
+  - GameControls
+  - FinishLevel1
+  - FinishLevel2
+  - FinishLevel3
   layers:
   - Default
   - TransparentFX

@@ -226,13 +226,14 @@ public class InputManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish")
+        if (other.tag == "FinishLevel1")
         {
             winLoseScreen.SetActive(true);
             player.SetActive(false);
             gameUI.SetActive(false);
             Cursor.visible = true;
             TimerController.instance.EndTimer();
+            Destroy(other.gameObject);
         }
     }
 }

@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class HubNavigation : MonoBehaviour
 {
+    public static bool levelOneWin;
     public Animator transition;
     public float transitionTime = 1.5f;
+
+    private void awake()
+    {
+        levelOneWin = false;
+    }
 
     void OnTriggerEnter(Collider other)
     {
