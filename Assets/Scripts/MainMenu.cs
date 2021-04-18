@@ -10,13 +10,13 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsPanel;
 
     public Animator transition;
-    public float transitionTime = 1.5f;
+    float transitionTime = 1.5f;
 
     public GameObject playerCam;
     public GameObject player;
     public GameObject menuCam;
 
-    float timeRemaining = 19;
+    float timeRemaining = 16;
     public bool isStarted;
 
 
@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
         isStarted = false;
     }
 
+    //camera animation; delay between MainMenu & HubLevel scenes
     void Update()
     {
         if (isStarted == true)
@@ -45,8 +46,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         isStarted = true;
-        //DisableMM();
-        StartPlayer();
+        StartIntro();
         Cursor.visible = false;
     }
 
@@ -54,14 +54,12 @@ public class MainMenu : MonoBehaviour
     {
         DisableMM();
         howtoPanel.SetActive(true);
-        Debug.Log("You Opened 'How to Play' panel");
     }
 
     public void Options()
     {
         DisableMM();
         optionsPanel.SetActive(true);
-        Debug.Log("You Opened 'Options' panel");
     }
 
     public void Back()
@@ -74,7 +72,6 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
-        Debug.Log("You Exited the Game");
     }
 
     //disable main menu
@@ -83,20 +80,15 @@ public class MainMenu : MonoBehaviour
         mainPanel.SetActive(false);
     }
 
-    //begin intro sequence
-    void StartPlayer()
+    //begin intro; playercontrols are disabled during sequence
+    void StartIntro()
     {
         playerCam.SetActive(true);
         player.SetActive(true);
         menuCam.SetActive(false);
     }
 
-
-    public void LoadNextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
+    //for scene transition
     IEnumerator LoadLevel(int levelIndex)
     {
         //play anim
