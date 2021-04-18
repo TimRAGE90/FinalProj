@@ -245,5 +245,15 @@ public class InputManager : MonoBehaviour
             TimerController.instance.EndTimer();
             Destroy(other.gameObject);
         }
+
+        else if (other.tag == "FinishLevel3")
+        {
+            winLoseScreen.SetActive(true);
+            player.SetActive(false);
+            gameUI.SetActive(false);
+            Cursor.visible = true;
+            TimerController.instance.EndTimer();
+            Destroy(other.gameObject);
+        }
     }
 }
