@@ -69,3 +69,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Library/ArtifactDB
+Library/SourceAssetDB
+Library/ShaderCache/EditorEncounteredVariants
+Library/ScriptAssemblies/Assembly-CSharp.pdb
+Library/ScriptAssemblies/Assembly-CSharp.dll
+Library/SceneVisibilityState.asset
+Library/ArtifactDB
