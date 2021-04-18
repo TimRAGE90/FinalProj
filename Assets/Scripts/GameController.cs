@@ -15,10 +15,19 @@ public class GameController : MonoBehaviour
     void Update()
     {
         GameObject temp = GameObject.FindWithTag("FinishLevel1");
+        GameObject tempA = GameObject.FindWithTag("FinishLevel2");
 
-        if(temp == null)
+        if (temp == null)
         {
-            if (SceneManager.GetActiveScene().name == "testing")
+            if (SceneManager.GetActiveScene().name == "Level 1")
+            {
+                levelOneWin = true;
+            }
+        }
+
+        else if (tempA == null)
+        {
+            if (SceneManager.GetActiveScene().name == "Level 2")
             {
                 levelOneWin = true;
             }
