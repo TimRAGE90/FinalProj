@@ -17,6 +17,11 @@ TagManager:
   - NightTown
   - Forest
   - Warehouse
+  - MoveLook
+  - WallRun
+  - Slide
+  - Zombie
+  - Jump
   layers:
   - Default
   - TransparentFX
