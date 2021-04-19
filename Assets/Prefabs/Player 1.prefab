@@ -1405,7 +1405,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2599757937631401715}
-  - component: {fileID: 6696555253202241829}
   m_Layer: 11
   m_Name: mixamorig:RightHandIndex1
   m_TagString: Untagged
@@ -1428,19 +1427,6 @@ Transform:
   m_Father: {fileID: 5513751152841174941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6696555253202241829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541737126900470330}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2102161, y: 0.024813771, z: 0.08356278}
-  m_Center: {x: 0.0025204122, y: 0.013594072, z: -0.031380452}
 --- !u!1 &5661774479245410173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,7 +1712,7 @@ MonoBehaviour:
   isJumping: 0
   isCrouching: 0
   walkingSpeed: 3
-  runningSpeed: 20
+  runningSpeed: 10
   slidingSpeed: 7
   rotationSpeed: 15
   jumpHeight: 7

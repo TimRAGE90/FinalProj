@@ -22,6 +22,12 @@ public class PlayerManager : MonoBehaviour
         wallRun = GetComponent<WallRun>();
     }
 
+    private void Start()
+    {
+        //Set Cursor to not be visible
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         inputManager.HandleAllInputs();
