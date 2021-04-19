@@ -10,6 +10,10 @@ public class GameController : MonoBehaviour
     public bool levelThreeWin;
     public bool gameOver;
 
+    public GameObject winLoseScreen;
+    public GameObject gameUI;
+    public GameObject player;
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -18,8 +22,8 @@ public class GameController : MonoBehaviour
     void Update()
     {
         GameObject temp = GameObject.FindWithTag("FinishLevel1");
-        GameObject tempA = GameObject.FindWithTag("FinishLevel2");
-        GameObject tempB = GameObject.FindWithTag("FinishLevel2");
+        GameObject tempa = GameObject.FindWithTag("FinishLevel2");
+        GameObject tempb = GameObject.FindWithTag("FinishLevel3");
 
         if (temp == null)
         {
@@ -29,7 +33,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        else if (tempA == null)
+        if (tempa == null)
         {
             if (SceneManager.GetActiveScene().name == "Level 2")
             {
@@ -37,9 +41,9 @@ public class GameController : MonoBehaviour
             }
         }
 
-        else if (tempB == null)
+        if (tempb == null)
         {
-            if (SceneManager.GetActiveScene().name == "Level 3")
+            if (SceneManager.GetActiveScene().name == "level 3")
             {
                 levelThreeWin = true;
             }
@@ -48,6 +52,14 @@ public class GameController : MonoBehaviour
         if (levelOneWin && levelTwoWin && levelThreeWin == true)
         {
             gameOver = true;
+        }
+
+        if (gameOver == true)
+        {
+            winLoseScreen.SetActive(false);
+            player.SetActive(false);
+            gameUI.SetActive(false);
+            Cursor.visible = true;
         }
     }
     
