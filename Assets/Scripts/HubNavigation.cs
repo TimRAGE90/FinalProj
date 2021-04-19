@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 public class HubNavigation : MonoBehaviour
 {
     public static bool levelOneWin;
+
     public Animator transition;
     public float transitionTime = 1.5f;
 
-    private void awake()
+    public GameObject forestPanel;
+    public GameObject nightPanel;
+    public GameObject warePanel;
+
+
+    private void Awake()
     {
         levelOneWin = false;
+        Disable();
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,8 +46,37 @@ public class HubNavigation : MonoBehaviour
         {
             transform.position = new Vector3(0, 0, 0);
         }
+
+        if (other.tag == "Forest")
+        {
+            forestPanel.SetActive(true);
+        }
+
+        if (other.tag == "NightTown")
+        {
+            nightPanel.SetActive(true);
+        }
+
+        if (other.tag == "Warehouse")
+        {
+            warePanel.SetActive(true);
+        }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Forest" || other.tag == "NightTown" || other.tag == "Warehouse")
+        {
+            Disable();
+        }
+    }
+
+    void Disable()
+    {
+        forestPanel.SetActive(false);
+        nightPanel.SetActive(false);
+        warePanel.SetActive(false);
+    }
 
     IEnumerator LoadLevel(int levelIndex)
     {
