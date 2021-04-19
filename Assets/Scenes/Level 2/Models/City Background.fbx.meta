@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Beam
-    second: {fileID: 2100000, guid: 210ce32b3d100c6428a5ff0f5fa27c57, type: 2}
+    second: {fileID: 2100000, guid: f0c00beec33131a4c832751dd0f2dacc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roof
-    second: {fileID: 2100000, guid: c9c5f4db2769b5f4a9863a7c8ea05bb9, type: 2}
+    second: {fileID: 2100000, guid: 01e8ee3b51556f14eb015598de5a4708, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows
-    second: {fileID: 2100000, guid: 576aef57a1cb950469b0ae492bc37dd7, type: 2}
+    second: {fileID: 2100000, guid: 968ae7ac34e8a854fa5fb888eb897126, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

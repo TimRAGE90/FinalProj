@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
     float timeRemaining = 16;
     public bool isStarted;
 
+    public GameObject intro;
+
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class MainMenu : MonoBehaviour
         menuCam.SetActive(true);
         Cursor.visible = true;
         isStarted = false;
+        intro.SetActive(false);
     }
 
     //camera animation; delay between MainMenu & HubLevel scenes
@@ -48,6 +51,7 @@ public class MainMenu : MonoBehaviour
         isStarted = true;
         StartIntro();
         Cursor.visible = false;
+        intro.SetActive(true);
     }
 
     public void HowtoPlay()
