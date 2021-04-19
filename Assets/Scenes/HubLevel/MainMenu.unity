@@ -2963,9 +2963,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 202268170}
     m_Modifications:
+    - target: {fileID: 4869027534458519115, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 576942241}
+    - target: {fileID: 4869027534458519115, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470232796013535846, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 84.048584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470232796013535846, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40.13269
+      objectReference: {fileID: 0}
     - target: {fileID: 7898887645174876071, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -31.835938
+      value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887645539334417, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7898887645655070046, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_IsActive
@@ -2993,6 +3013,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7898887645989906225, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887646085177538, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887646085177538, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7898887646135821515, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
@@ -3078,6 +3106,18 @@ PrefabInstance:
     - target: {fileID: 7898887646135821515, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887646247206530, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887646247206530, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898887646247206530, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7898887646605268823, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_IsActive
@@ -6210,6 +6250,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 219619668}
   transitionTime: 1.5
+  forestPanel: {fileID: 0}
+  nightPanel: {fileID: 0}
+  warePanel: {fileID: 0}
 --- !u!1 &1732734834
 GameObject:
   m_ObjectHideFlags: 0
@@ -7995,7 +8038,7 @@ GameObject:
   - component: {fileID: 2095178566}
   - component: {fileID: 2095178565}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
