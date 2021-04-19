@@ -50,8 +50,8 @@ public class InputManager : MonoBehaviour
         objCollider = obj.GetComponent<Collider>();
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
-        //Cursor.visible = false;
-        thrownObjectText.text = "Holding Ball";
+      
+        //thrownObjectText.text = "Holding Ball";
 
         //musicSource.clip = mainmusic;
         //musicSource.Play();
