@@ -18,9 +18,8 @@ public class WallRun : MonoBehaviour
     public float maxWallSpeed;
     public bool isWallRight;
     public bool isWallLeft;
-    public bool wallRunL;
-    public bool wallRunR;
     public bool isWallRunning;
+ 
     public Transform orientation;
 
     public float jumpForce;
@@ -39,59 +38,67 @@ public class WallRun : MonoBehaviour
 
         CheckForWall();
         WallRunInput();
-
+        
+        if(playerLocomotion.isGrounded == true)
+            {
+                wallRunTime = 0;
+            }
+        else
+        {
+             wallRunTime += Time.deltaTime;
+         
+        }
+        
+       
     }
 
     private void WallRunInput() //make sure to call in void Update
     {
+      
         //Wallrun
         if ((inputManager.horizontalInput == 1) && isWallRight)
-        {   
+        {  
+    
             StartWallrun();
         }
         
         if ((inputManager.horizontalInput == -1) && isWallLeft)
         {
+           
             StartWallrun();
         }
     }
 
     private void StartWallrun()
     {
+        
+        
         playerLocomotion.playerRigidbody.useGravity = false;
-        isWallRunning = true;
         
-        
-      
 
-        if (playerLocomotion.playerRigidbody.velocity.magnitude <= maxWallSpeed)
+
+        if (playerLocomotion.playerRigidbody.velocity.magnitude <= maxWallSpeed && (isWallRight || isWallLeft == true))
         {
             playerLocomotion.playerRigidbody.AddForce(orientation.forward * wallrunForce * Time.deltaTime);
-            
 
-            if(wallRunTime < maxWallrunTime && playerLocomotion.isGrounded == false)
+
+            if(wallRunTime < maxWallrunTime && playerLocomotion.isGrounded == false )
             {
                 //Make sure char sticks to wall
-                if (isWallRight && inputManager.horizontalInput != 0)
+                if (isWallRight)
                 {
-                    wallRunR = true;
                     animatorManager.PlayTargetAnimation("WallRunR", true);
-                    playerLocomotion.playerRigidbody.AddForce(orientation.right * wallrunForce / 5 * Time.deltaTime);
-                    wallRunTime += Time.deltaTime;
+                    playerLocomotion.playerRigidbody.AddForce(orientation.right * wallrunForce / 5 * Time.deltaTime, ForceMode.Impulse);
+                    
                 }
                     
-                if(isWallLeft && inputManager.horizontalInput != 0)
+                if(isWallLeft)
                 {   
-                    wallRunL = true;
+                
                     animatorManager.PlayTargetAnimation("WallRunL", true);
-                    playerLocomotion.playerRigidbody.AddForce(-orientation.right * wallrunForce / 5 * Time.deltaTime);
-                    wallRunTime += Time.deltaTime;
+                    playerLocomotion.playerRigidbody.AddForce(-orientation.right * wallrunForce / 5 * Time.deltaTime, ForceMode.Impulse);
+                    
                 }
-
-                //sidwards wallhop
-                if (isWallRight || isWallLeft && inputManager.horizontalInput == 1 || inputManager.horizontalInput == -1) playerLocomotion.playerRigidbody.AddForce(-orientation.up * jumpForce * 1f);
-                if (isWallRight && inputManager.horizontalInput == -1) playerLocomotion.playerRigidbody.AddForce(-orientation.right * jumpForce * 3.2f);
-                if (isWallLeft && inputManager.horizontalInput == 1) playerLocomotion.playerRigidbody.AddForce(orientation.right * jumpForce * 3.2f);
 
                 //Always add forward force
                 playerLocomotion.playerRigidbody.AddForce(orientation.forward * jumpForce * 1f);
@@ -99,6 +106,7 @@ public class WallRun : MonoBehaviour
             }
             else
             {
+                StopWallRun();
                 playerLocomotion.playerRigidbody.velocity += Vector3.down * wallGravityDownForce * Time.deltaTime;
             }
         }
@@ -108,10 +116,7 @@ public class WallRun : MonoBehaviour
 
     private void StopWallRun()
     {
-        
         isWallRunning = false;
-        wallRunL = false;
-        wallRunR = false;
         playerLocomotion.playerRigidbody.useGravity = true;
     }
 
