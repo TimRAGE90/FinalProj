@@ -229,7 +229,7 @@ public class InputManager : MonoBehaviour
             Destroy(other.gameObject);
         }
         
-        else if (other.tag == "FinishLevel2")
+        if (other.tag == "FinishLevel2")
         {
             winLoseScreen.SetActive(true);
             player.SetActive(false);
@@ -239,7 +239,7 @@ public class InputManager : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.tag == "FinishLevel3")
+        if (other.tag == "FinishLevel3")
         {
             winLoseScreen.SetActive(true);
             player.SetActive(false);

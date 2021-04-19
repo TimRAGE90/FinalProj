@@ -8,17 +8,25 @@ public class HubNavigation : MonoBehaviour
     public static bool levelOneWin;
 
     public Animator transition;
-    public float transitionTime = 1.5f;
+    float transitionTime = 1.5f;
 
     public GameObject forestPanel;
     public GameObject nightPanel;
     public GameObject warePanel;
+
+    public GameObject movePanel;
+    public GameObject lookPanel;
+    public GameObject wallrunPanel;
+    public GameObject jumpPanel;
+    public GameObject slidePanel;
+    public GameObject zombiePanel;
 
 
     private void Awake()
     {
         levelOneWin = false;
         Disable();
+        RemovePanels();
     }
 
     void OnTriggerEnter(Collider other)
@@ -61,6 +69,32 @@ public class HubNavigation : MonoBehaviour
         {
             warePanel.SetActive(true);
         }
+
+        if (other.tag == "MoveLook")
+        {
+            movePanel.SetActive(true);
+            lookPanel.SetActive(true);
+        }
+
+        if (other.tag == "WallRun")
+        {
+            wallrunPanel.SetActive(true);
+        }
+
+        if (other.tag == "Slide")
+        {
+            slidePanel.SetActive(true);
+        }
+
+        if (other.tag == "Jump")
+        {
+            jumpPanel.SetActive(true);
+        }
+
+        if (other.tag == "Zombie")
+        {
+            zombiePanel.SetActive(true);
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -68,6 +102,11 @@ public class HubNavigation : MonoBehaviour
         if (other.tag == "Forest" || other.tag == "NightTown" || other.tag == "Warehouse")
         {
             Disable();
+        }
+
+        if (other.tag == "MoveLook" || other.tag == "WallRun" || other.tag == "Slide" || other.tag == "Zombie" || other.tag == "Jump")
+        {
+            RemovePanels();
         }
     }
 
@@ -77,6 +116,16 @@ public class HubNavigation : MonoBehaviour
         nightPanel.SetActive(false);
         warePanel.SetActive(false);
     }
+
+    void RemovePanels()
+   {
+       movePanel.SetActive(false);
+       lookPanel.SetActive(false);
+       wallrunPanel.SetActive(false);
+       jumpPanel.SetActive(false);
+       slidePanel.SetActive(false);
+       zombiePanel.SetActive(false);
+   }
 
     IEnumerator LoadLevel(int levelIndex)
     {
