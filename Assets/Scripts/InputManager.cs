@@ -9,11 +9,10 @@ public class InputManager : MonoBehaviour
     PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
 
-    //public GameObject winLoseScreen;
-    //public GameObject gameUI;
-    //public GameObject player;
-
-    
+    public GameObject winLoseScreen;
+    public GameObject gameUI;
+    public GameObject player;
+    public Text thrownObjectText;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -30,7 +29,7 @@ public class InputManager : MonoBehaviour
 
     public AudioSource musicSource;
     AudioSource audioSource;
-    public AudioClip mainmusic;
+    //public AudioClip mainmusic;
 
     [Header("Throw")]
     public bool throw_input;
@@ -43,7 +42,6 @@ public class InputManager : MonoBehaviour
     private float time = 0.0f;
     public Transform target;
     public Transform curvePoint;
-    //public Text thrownObjectText;
 
     private void Awake()
     {
@@ -53,16 +51,16 @@ public class InputManager : MonoBehaviour
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
         //Cursor.visible = false;
-        //thrownObjectText.text = "Holding Ball";
+        thrownObjectText.text = "Holding Ball";
 
-        musicSource.clip = mainmusic;
-        musicSource.Play();
-        musicSource.loop = true;
+        //musicSource.clip = mainmusic;
+        //musicSource.Play();
+        //musicSource.loop = true;
     }
 
     private void Start()
     {
-        //TimerController.instance.BeginTimer();
+        TimerController.instance.BeginTimer();
     }
 
     private void OnEnable()
@@ -128,9 +126,6 @@ public class InputManager : MonoBehaviour
             animatorManager.PlayTargetAnimation("Jumping", false);
             animatorManager.animator.SetBool("isJumping", true);
         }
-
-      
-
     }
 
     private void cancelJumping()
@@ -161,7 +156,7 @@ public class InputManager : MonoBehaviour
         if (throw_input)
         {
             animatorManager.PlayTargetAnimation("Throwing", true);
-            //thrownObjectText.text = "Ball thrown";
+            thrownObjectText.text = "Ball thrown";
         }
        
     }
@@ -184,7 +179,7 @@ public class InputManager : MonoBehaviour
             obj.position += target.position - obj.position;
             obj.velocity = Vector3.zero;
             obj.isKinematic = true;
-            //thrownObjectText.text = "Holding Ball";
+            thrownObjectText.text = "Holding Ball";
         }
 
         if(isReturning)
@@ -221,7 +216,7 @@ public class InputManager : MonoBehaviour
         Vector3 p = (uu * p0) + (2 * u * t * p1) + (tt * p2);
         return p;
     }
-/*
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "FinishLevel1")
@@ -254,5 +249,4 @@ public class InputManager : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-*/
 }
