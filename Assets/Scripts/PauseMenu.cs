@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1;
             TurnOff();
+            Cursor.visible = false;
             //c_Rigidbody.constraints = RigidbodyConstraints.None;
         }   
     }
@@ -65,6 +66,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         TurnOff();
+        Cursor.visible = false;
     }
     public void About()
     {
@@ -87,6 +89,5 @@ public class PauseMenu : MonoBehaviour
     void TurnOff()
     {
         pausePanel.SetActive(false);
-        Cursor.visible = false;
     }
 }
