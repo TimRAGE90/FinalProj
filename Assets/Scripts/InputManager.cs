@@ -8,11 +8,10 @@ public class InputManager : MonoBehaviour
     PlayerControls playerControls;
     PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
-    WallRunningManager wallRunningManager;
 
-    public GameObject winLoseScreen;
-    public GameObject gameUI;
-    public GameObject player;
+    //public GameObject winLoseScreen;
+    //public GameObject gameUI;
+    //public GameObject player;
 
     
 
@@ -44,18 +43,17 @@ public class InputManager : MonoBehaviour
     private float time = 0.0f;
     public Transform target;
     public Transform curvePoint;
-    public Text thrownObjectText;
+    //public Text thrownObjectText;
 
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         objCollider = obj.GetComponent<Collider>();
-        wallRunningManager = GetComponent<WallRunningManager>();
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
         //Cursor.visible = false;
-        thrownObjectText.text = "Holding Ball";
+        //thrownObjectText.text = "Holding Ball";
 
         musicSource.clip = mainmusic;
         musicSource.Play();
@@ -64,7 +62,7 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
-        TimerController.instance.BeginTimer();
+        //TimerController.instance.BeginTimer();
     }
 
     private void OnEnable()
@@ -163,7 +161,7 @@ public class InputManager : MonoBehaviour
         if (throw_input)
         {
             animatorManager.PlayTargetAnimation("Throwing", true);
-            thrownObjectText.text = "Ball thrown";
+            //thrownObjectText.text = "Ball thrown";
         }
        
     }
@@ -186,7 +184,7 @@ public class InputManager : MonoBehaviour
             obj.position += target.position - obj.position;
             obj.velocity = Vector3.zero;
             obj.isKinematic = true;
-            thrownObjectText.text = "Holding Ball";
+            //thrownObjectText.text = "Holding Ball";
         }
 
         if(isReturning)
@@ -223,7 +221,7 @@ public class InputManager : MonoBehaviour
         Vector3 p = (uu * p0) + (2 * u * t * p1) + (tt * p2);
         return p;
     }
-
+/*
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "FinishLevel1")
@@ -236,4 +234,5 @@ public class InputManager : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+*/
 }

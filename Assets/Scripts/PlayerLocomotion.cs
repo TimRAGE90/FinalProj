@@ -7,7 +7,7 @@ public class PlayerLocomotion : MonoBehaviour
     PlayerManager playerManager;
     AnimatorManager animatorManager;
     InputManager inputManager;
-    WallRunningManager wallRunningManager;
+    
 
     Vector3 moveDirection;
     Transform cameraObject;
@@ -44,7 +44,6 @@ public class PlayerLocomotion : MonoBehaviour
         animatorManager = GetComponent<AnimatorManager>();
         inputManager = GetComponent<InputManager>();
         playerRigidbody = GetComponent<Rigidbody>();
-        wallRunningManager = GetComponent<WallRunningManager>();
         cameraObject = Camera.main.transform;
     }
 
@@ -122,7 +121,7 @@ public class PlayerLocomotion : MonoBehaviour
         Vector3 rayCastOrigin = transform.position;
         rayCastOrigin.y = rayCastOrigin.y + rayCastHeightOffSet;
 
-        if (!isGrounded && !isJumping && !wallRunningManager.isWallRunning)
+        if (!isGrounded && !isJumping)
         {
             if (!playerManager.isInteracting)
             {

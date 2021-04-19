@@ -8,7 +8,8 @@ public class PlayerManager : MonoBehaviour
     InputManager inputManager;
     CameraManager cameraManager;
     PlayerLocomotion playerLocomotion;
-    WallRunningManager wallRunningManager;
+    WallRun wallRun;
+    
 
     public bool isInteracting;
 
@@ -18,7 +19,7 @@ public class PlayerManager : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         cameraManager = FindObjectOfType<CameraManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
-        wallRunningManager = GetComponent<WallRunningManager>();
+        wallRun = GetComponent<WallRun>();
     }
 
     private void Update()
@@ -39,6 +40,8 @@ public class PlayerManager : MonoBehaviour
         playerLocomotion.isJumping = animator.GetBool("isJumping");
         animator.SetBool("isGrounded", playerLocomotion.isGrounded);
         animator.SetBool("isCrouching", playerLocomotion.isCrouching);
+        animator.SetBool("WallRunL", wallRun.wallRunL);
+        animator.SetBool("WallRunR", wallRun.wallRunR);
         
        
     }
