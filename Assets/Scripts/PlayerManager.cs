@@ -46,7 +46,8 @@ public class PlayerManager : MonoBehaviour
         playerLocomotion.isJumping = animator.GetBool("isJumping");
         animator.SetBool("isGrounded", playerLocomotion.isGrounded);
         animator.SetBool("isCrouching", playerLocomotion.isCrouching);
-      
+        animator.SetBool("WallRunL", wallRun.wallRunL);
+        animator.SetBool("WallRunR", wallRun.wallRunR);
         
        
     }
