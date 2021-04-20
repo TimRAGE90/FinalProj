@@ -9,10 +9,10 @@ public class InputManager : MonoBehaviour
     PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
 
-    public GameObject winLoseScreen;
-    public GameObject gameUI;
-    public GameObject player;
-    public Text thrownObjectText;
+   // public GameObject winLoseScreen;
+    //public GameObject gameUI;
+    //public GameObject player;
+    //public Text thrownObjectText;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -50,8 +50,8 @@ public class InputManager : MonoBehaviour
         objCollider = obj.GetComponent<Collider>();
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
-        //Cursor.visible = false;
-        thrownObjectText.text = "Holding Ball";
+       
+        //thrownObjectText.text = "Holding Ball";
 
         //musicSource.clip = mainmusic;
         //musicSource.Play();
@@ -156,7 +156,7 @@ public class InputManager : MonoBehaviour
         if (throw_input)
         {
             animatorManager.PlayTargetAnimation("Throwing", true);
-            thrownObjectText.text = "Ball thrown";
+           // thrownObjectText.text = "Ball thrown";
         }
        
     }
@@ -179,7 +179,7 @@ public class InputManager : MonoBehaviour
             obj.position += target.position - obj.position;
             obj.velocity = Vector3.zero;
             obj.isKinematic = true;
-            thrownObjectText.text = "Holding Ball";
+            //thrownObjectText.text = "Holding Ball";
         }
 
         if(isReturning)
@@ -216,7 +216,7 @@ public class InputManager : MonoBehaviour
         Vector3 p = (uu * p0) + (2 * u * t * p1) + (tt * p2);
         return p;
     }
-
+/*
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "FinishLevel1")
@@ -249,4 +249,5 @@ public class InputManager : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    */
 }
