@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 2026987864248273334}
   - component: {fileID: 2026987864248273335}
   - component: {fileID: 6696555253241395868}
-  - component: {fileID: 8488114769235776819}
+  - component: {fileID: 7506696944792559226}
   m_Layer: 11
   m_Name: Player 1
   m_TagString: Player
@@ -1622,11 +1622,11 @@ MonoBehaviour:
   isJumping: 0
   isCrouching: 0
   walkingSpeed: 5
-  runningSpeed: 15
+  runningSpeed: 7
   slidingSpeed: 10
   rotationSpeed: 15
   jumpHeight: 7
-  gravityIntensity: -20
+  gravityIntensity: -30
 --- !u!114 &6480682537161682185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   isWallRunning: 0
   orientation: {fileID: 6696555253227172738}
   jumpForce: 5
---- !u!136 &8488114769235776819
+--- !u!136 &7506696944792559226
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1818,9 +1818,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.5658834
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 1.0597197, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6499937961041759839
 GameObject:
   m_ObjectHideFlags: 0
