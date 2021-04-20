@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public GameObject winLoseScreen;
     public GameObject gameUI;
     public GameObject player;
+    public GameObject gameOverScreen;
 
     void Start()
     {
@@ -56,6 +57,7 @@ public class GameController : MonoBehaviour
 
         if (gameOver == true)
         {
+            gameOverScreen.SetActive(true);
             winLoseScreen.SetActive(false);
             player.SetActive(false);
             gameUI.SetActive(false);

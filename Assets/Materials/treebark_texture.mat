@@ -21,14 +21,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: treebark_texture
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 70170d977ebbb494fbe0c099a36f15bd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -62,6 +61,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_22EC605B: 0.7
+    - Vector1_89EB13C4: 0.1
+    - Vector1_D56B7000: 32
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -84,6 +86,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_333BA2A6: {r: 0.006372549, g: 0.006372549, b: 0.006372549, a: 0}
+    - Color_AE1C9A1F: {r: 0.125, g: 0.125, b: 0.125, a: 0}
+    - Color_B52959FB: {r: 0.20754719, g: 0.1005167, b: 0.024801217, a: 0}
+    - Color_E9493BC7: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

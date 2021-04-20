@@ -391,20 +391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 0}
   finalScore: {fileID: 0}
---- !u!114 &1629259628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509535109755869665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e249b5c29a900478a008e0f52a0fc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  finalScore: {fileID: 0}
 --- !u!1 &1652339195238432029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1522,7 @@ GameObject:
   - component: {fileID: 2026987864248273334}
   - component: {fileID: 2026987864248273335}
   - component: {fileID: 6696555253241395868}
+  - component: {fileID: 8488114769235776819}
   m_Layer: 11
   m_Name: Player 1
   m_TagString: Player
@@ -1820,6 +1807,20 @@ MonoBehaviour:
   isWallRunning: 0
   orientation: {fileID: 6696555253227172738}
   jumpForce: 5
+--- !u!136 &8488114769235776819
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480682537161682180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.5658834
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0597197, z: 0}
 --- !u!1 &6499937961041759839
 GameObject:
   m_ObjectHideFlags: 0
