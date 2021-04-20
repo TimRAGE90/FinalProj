@@ -9443,6 +9443,14 @@ PrefabInstance:
       propertyPath: finalScore
       value: 
       objectReference: {fileID: 1987559404}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16505,7 +16513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3726154332119954810, guid: 295eed43d63c6d04e90af0678362e97f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3726154332119954811, guid: 295eed43d63c6d04e90af0678362e97f, type: 3}
       propertyPath: m_LocalPosition.x
