@@ -3894,6 +3894,10 @@ PrefabInstance:
       propertyPath: finalScore
       value: 
       objectReference: {fileID: 1366095939}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3954,6 +3958,22 @@ PrefabInstance:
       propertyPath: thrownObjectText
       value: 
       objectReference: {fileID: 165419269}
+    - target: {fileID: 6480682537161682186, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: walkingSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480682537161682186, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: runningSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480682537161682186, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: slidingSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506696944792559226, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
 --- !u!1001 &460453760
