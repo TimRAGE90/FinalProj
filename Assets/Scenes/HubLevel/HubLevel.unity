@@ -13367,7 +13367,7 @@ PrefabInstance:
     - target: {fileID: 8980060579836317847, guid: 42c625b3ca5c57b489d83fe7e925a1d6, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1705801847}
+      objectReference: {fileID: 0}
     - target: {fileID: 8980060579836317847, guid: 42c625b3ca5c57b489d83fe7e925a1d6, type: 3}
       propertyPath: gameUI
       value: 
@@ -14565,7 +14565,7 @@ PrefabInstance:
     - target: {fileID: 2718988210613954375, guid: a0f1ad109a42b85498ceca95a31f3d03, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1705801836}
+      objectReference: {fileID: 0}
     - target: {fileID: 2718988210613954375, guid: a0f1ad109a42b85498ceca95a31f3d03, type: 3}
       propertyPath: gameOverScreen
       value: 

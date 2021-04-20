@@ -16748,6 +16748,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 295eed43d63c6d04e90af0678362e97f, type: 3}
+--- !u!1 &593001191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593001193}
+  - component: {fileID: 593001192}
+  m_Layer: 0
+  m_Name: Respawn_GameObject
+  m_TagString: HubPit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &593001192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593001191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7973406, y: 33.914368, z: 2.4635947}
+  m_Center: {x: 0.13067119, y: 5.228424, z: 0.29228324}
+--- !u!4 &593001193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593001191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.912259, y: -32, z: 84.05736}
+  m_LocalScale: {x: 174.66, y: 1, z: 144.24}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596730577
 GameObject:
   m_ObjectHideFlags: 0
@@ -21524,6 +21568,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &747448352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6480682537161682180, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+  m_PrefabInstance: {fileID: 296110144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &747448353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747448352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb87b23396fc5348b3f39e97e8645d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  forestPanel: {fileID: 0}
+  nightPanel: {fileID: 0}
+  warePanel: {fileID: 0}
+  movePanel: {fileID: 0}
+  lookPanel: {fileID: 0}
+  wallrunPanel: {fileID: 0}
+  jumpPanel: {fileID: 0}
+  slidePanel: {fileID: 0}
+  zombiePanel: {fileID: 0}
 --- !u!1 &747841237
 GameObject:
   m_ObjectHideFlags: 0
