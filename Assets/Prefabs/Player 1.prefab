@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 2026987864248273334}
   - component: {fileID: 2026987864248273335}
   - component: {fileID: 6696555253241395868}
-  - component: {fileID: 7506696944792559226}
+  - component: {fileID: 3557027679169785710}
   m_Layer: 11
   m_Name: Player 1
   m_TagString: Player
@@ -1693,7 +1693,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 2349.4062
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1807,20 +1807,19 @@ MonoBehaviour:
   isWallRunning: 0
   orientation: {fileID: 6696555253227172738}
   jumpForce: 5
---- !u!136 &7506696944792559226
-CapsuleCollider:
+--- !u!65 &3557027679169785710
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6480682537161682180}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.30319118
-  m_Height: 0.6605444
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.2805493, z: -0.19680882}
+  serializedVersion: 2
+  m_Size: {x: 0.29588813, y: 0.030488491, z: 0}
+  m_Center: {x: 0.0025335252, y: 0.77817583, z: 0.099684715}
 --- !u!1 &6499937961041759839
 GameObject:
   m_ObjectHideFlags: 0

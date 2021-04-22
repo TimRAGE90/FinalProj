@@ -43,6 +43,8 @@ public class InputManager : MonoBehaviour
     public Transform target;
     public Transform curvePoint;
 
+    Collider playerColliderComponent;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
@@ -61,6 +63,8 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         TimerController.instance.BeginTimer();
+        playerColliderComponent = GetComponent<BoxCollider>();
+        //InvincibleCheat();
     }
 
     private void OnEnable()
@@ -248,5 +252,10 @@ public class InputManager : MonoBehaviour
             TimerController.instance.EndTimer();
             Destroy(other.gameObject);
         }
+    }
+
+    public void InvincibleCheat()
+    {
+        playerColliderComponent.enabled = false;
     }
 }
