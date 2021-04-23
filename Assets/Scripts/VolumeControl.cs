@@ -8,7 +8,6 @@ public class VolumeControl : MonoBehaviour
     public AudioMixer musicMixer;
     public AudioMixer soundMixer;
 
-    static bool isActive;
 
     InputManager a;
 
@@ -17,21 +16,9 @@ public class VolumeControl : MonoBehaviour
 
     void Start()
     {
-        isActive = false;
         a = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
         //playerColliderComponent = GetComponent<BoxCollider>();
         //playerInvincibleCheat = true;
-    }
-
-    void Update()
-    {
-        //InputManager player = GetComponent<InputManager>();
-
-        if (isActive == true)
-        {
-            //InputManager player = GetComponent<InputManager>();
-            a.InvincibleCheat();
-        }
     }
 
     public void SetMusicLevel (float sliderValue)
@@ -46,14 +33,11 @@ public class VolumeControl : MonoBehaviour
 
     public void SetInvincibleMode(bool tog)
     {
+        InputManager player = GetComponent<InputManager>();
 
         if (tog == true)
         {
-            isActive = true;
-        }
-        if (tog == false)
-        {
-            isActive = false;
+            player.InvincibleCheat();
         }
     }
 

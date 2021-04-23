@@ -71,7 +71,7 @@ public class PauseMenu : MonoBehaviour
     public void About()
     {
         aboutPanel.SetActive(true);
-        TurnOff();
+        pausePanel.SetActive(false);
     }
     public void Back()
     {
@@ -89,5 +89,6 @@ public class PauseMenu : MonoBehaviour
     void TurnOff()
     {
         pausePanel.SetActive(false);
+        aboutPanel.SetActive(false);
     }
 }
