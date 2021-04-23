@@ -5424,6 +5424,8 @@ MonoBehaviour:
   jumpPanel: {fileID: 603475187}
   slidePanel: {fileID: 1143885467}
   zombiePanel: {fileID: 654446332}
+  resetSound: {fileID: 8300000, guid: f283d4f15a8777446bf60007783f9545, type: 3}
+  transSound: {fileID: 8300000, guid: c04985607a3e0e6469a995321de83340, type: 3}
 --- !u!1 &883447128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,10 +8492,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: fdff67c64a10513449e6aa6fff983828, type: 2}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
