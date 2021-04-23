@@ -12,8 +12,7 @@ public class MainMenu : MonoBehaviour
     public Animator transition;
     float transitionTime = 1.5f;
 
-    public GameObject playerCam;
-    public GameObject player;
+    public GameObject animCam;
     public GameObject menuCam;
 
     float timeRemaining = 16;
@@ -24,8 +23,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        playerCam.SetActive(false);
-        player.SetActive(false);
+        animCam.SetActive(false);
         menuCam.SetActive(true);
         Cursor.visible = true;
         isStarted = false;
@@ -87,8 +85,7 @@ public class MainMenu : MonoBehaviour
     //begin intro; playercontrols are disabled during sequence
     void StartIntro()
     {
-        playerCam.SetActive(true);
-        player.SetActive(true);
+        animCam.SetActive(true);
         menuCam.SetActive(false);
     }
 
