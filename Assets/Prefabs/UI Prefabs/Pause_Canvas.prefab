@@ -769,6 +769,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4487533147854401344, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.265625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487533147854401344, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 17.369873
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824871061791056790, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2330723076668348443}
+    - target: {fileID: 6824871061791056790, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824871061791056790, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5983f58a9d236ca44b507a75928f828e, type: 3}
 --- !u!1 &8825485787929086258 stripped

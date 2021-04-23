@@ -64,7 +64,6 @@ public class InputManager : MonoBehaviour
     {
         TimerController.instance.BeginTimer();
         playerColliderComponent = GetComponent<BoxCollider>();
-        //InvincibleCheat();
     }
 
     private void OnEnable()
@@ -257,5 +256,6 @@ public class InputManager : MonoBehaviour
     public void InvincibleCheat()
     {
         playerColliderComponent.enabled = false;
+        Debug.Log("Cheat Active");
     }
 }
