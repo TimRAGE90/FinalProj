@@ -9,14 +9,12 @@ public class VolumeControl : MonoBehaviour
     public AudioMixer soundMixer;
 
 
-    InputManager a;
 
     //Collider playerColliderComponent;
     //public bool playerInvincibleCheat;
 
     void Start()
     {
-        a = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
         //playerColliderComponent = GetComponent<BoxCollider>();
         //playerInvincibleCheat = true;
     }
@@ -36,6 +34,11 @@ public class VolumeControl : MonoBehaviour
         InputManager player = GetComponent<InputManager>();
 
         if (tog == true)
+        {
+            player.InvincibleCheat();
+        }
+        
+        else if (tog == false)
         {
             player.InvincibleCheat();
         }
