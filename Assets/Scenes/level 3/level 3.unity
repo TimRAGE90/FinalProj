@@ -2214,6 +2214,14 @@ PrefabInstance:
       propertyPath: finalScore
       value: 
       objectReference: {fileID: 1779791636}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5275952f32483fc4eafcd7d886a56cc6, type: 3}
+    - target: {fileID: 2026987864248273334, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
+      propertyPath: m_Volume
+      value: 0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
