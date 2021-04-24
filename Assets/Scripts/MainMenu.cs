@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainPanel;
     public GameObject howtoPanel;
     public GameObject optionsPanel;
+    public GameObject creditsPanel;
 
     public Animator transition;
     float transitionTime = 1.5f;
@@ -28,6 +29,7 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
         isStarted = false;
         intro.SetActive(false);
+        creditsPanel.SetActive(false);
     }
 
     //camera animation; delay between MainMenu & HubLevel scenes
@@ -64,16 +66,24 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(true);
     }
 
+    public void Credits()
+    {
+        mainPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+    }
+
     public void Back()
     {
         howtoPanel.SetActive(false);
         optionsPanel.SetActive(false);
         mainPanel.SetActive(true);
+        creditsPanel.SetActive(false);
     }
 
     public void Quit()
     {
         Application.Quit();
+        Debug.Log("You Exited the Game");
     }
 
     //disable main menu

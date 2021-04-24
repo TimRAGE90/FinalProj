@@ -29,19 +29,9 @@ public class VolumeControl : MonoBehaviour
         soundMixer.SetFloat ("SoundVol", Mathf.Log10 (sliderValue) * 10);
     }
 
-    public void SetInvincibleMode(bool tog)
+    public void SetFullscreen(bool isFullscreen)
     {
-        InputManager player = GetComponent<InputManager>();
-
-        if (tog == true)
-        {
-            player.InvincibleCheat();
-        }
-        
-        else if (tog == false)
-        {
-            player.InvincibleCheat();
-        }
+        Screen.fullScreen = isFullscreen;
     }
 
 
