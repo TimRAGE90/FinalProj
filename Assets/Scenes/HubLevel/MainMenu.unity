@@ -1420,7 +1420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.016
+      value: -0.052
       objectReference: {fileID: 0}
     - target: {fileID: 5961590266365818814, guid: 820e227db3ea7274cb6e19ae5794854d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1888,8 +1888,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315930930}
   m_LocalRotation: {x: -0, y: -0.7043494, z: -0, w: 0.7098535}
-  m_LocalPosition: {x: -0.11, y: -1.779, z: 4.53}
-  m_LocalScale: {x: 15, y: 2.0666614, z: 10.489735}
+  m_LocalPosition: {x: -0.11, y: -1.779, z: 4.4054}
+  m_LocalScale: {x: 15, y: 2.07506, z: 10.489735}
   m_Children: []
   m_Father: {fileID: 255418876}
   m_RootOrder: 14
@@ -4841,6 +4841,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7898887646605268823, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173318620021759810, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8435695385770700786, guid: 557fe4261df6efa469ca31601bf09fc9, type: 3}
@@ -8309,7 +8313,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -8324,7 +8328,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

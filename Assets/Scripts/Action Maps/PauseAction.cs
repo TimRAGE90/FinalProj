@@ -33,6 +33,14 @@ public class @PauseAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cheat"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ed87aba-a713-488c-bfd8-a4ce8c1563b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -57,6 +65,17 @@ public class @PauseAction : IInputActionCollection, IDisposable
                     ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d672273-ebd2-410b-b432-ea37fb1e2327"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cheat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -67,6 +86,7 @@ public class @PauseAction : IInputActionCollection, IDisposable
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
         m_UI_Quit = m_UI.FindAction("Quit", throwIfNotFound: true);
+        m_UI_Cheat = m_UI.FindAction("Cheat", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -118,12 +138,14 @@ public class @PauseAction : IInputActionCollection, IDisposable
     private IUIActions m_UIActionsCallbackInterface;
     private readonly InputAction m_UI_Pause;
     private readonly InputAction m_UI_Quit;
+    private readonly InputAction m_UI_Cheat;
     public struct UIActions
     {
         private @PauseAction m_Wrapper;
         public UIActions(@PauseAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Pause => m_Wrapper.m_UI_Pause;
         public InputAction @Quit => m_Wrapper.m_UI_Quit;
+        public InputAction @Cheat => m_Wrapper.m_UI_Cheat;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -139,6 +161,9 @@ public class @PauseAction : IInputActionCollection, IDisposable
                 @Quit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
                 @Quit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
                 @Quit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnQuit;
+                @Cheat.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCheat;
+                @Cheat.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCheat;
+                @Cheat.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnCheat;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -149,6 +174,9 @@ public class @PauseAction : IInputActionCollection, IDisposable
                 @Quit.started += instance.OnQuit;
                 @Quit.performed += instance.OnQuit;
                 @Quit.canceled += instance.OnQuit;
+                @Cheat.started += instance.OnCheat;
+                @Cheat.performed += instance.OnCheat;
+                @Cheat.canceled += instance.OnCheat;
             }
         }
     }
@@ -157,5 +185,6 @@ public class @PauseAction : IInputActionCollection, IDisposable
     {
         void OnPause(InputAction.CallbackContext context);
         void OnQuit(InputAction.CallbackContext context);
+        void OnCheat(InputAction.CallbackContext context);
     }
 }

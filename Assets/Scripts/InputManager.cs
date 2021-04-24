@@ -31,6 +31,7 @@ public class InputManager : MonoBehaviour
     AudioSource audioSource;
     //public AudioClip mainmusic;
 
+
     [Header("Throw")]
     public bool throw_input;
     public bool return_input;
@@ -44,6 +45,8 @@ public class InputManager : MonoBehaviour
     public Transform curvePoint;
 
     Collider playerColliderComponent;
+
+    PauseAction pauseAction;
 
     private void Awake()
     {
@@ -89,6 +92,11 @@ public class InputManager : MonoBehaviour
             //Jump
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             
+
+            //action map code to activate invincible cheat        
+            pauseAction = new PauseAction();
+            pauseAction.UI.Cheat.performed += _ => InvincibleCheat();
+            pauseAction.Enable();
         }
 
         playerControls.Enable();
@@ -97,6 +105,7 @@ public class InputManager : MonoBehaviour
     private void OnDisable()
     {
         playerControls.Disable();
+        pauseAction.Disable();
     }
 
     public void HandleAllInputs()
@@ -253,9 +262,18 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    //push M key to activate invincible cheat
     public void InvincibleCheat()
     {
-        playerColliderComponent.enabled = false;
-        Debug.Log("Cheat Active");
+        if (playerColliderComponent.enabled == true)
+        {
+            playerColliderComponent.enabled = false;
+            Debug.Log("Cheat Activated");
+        }
+        else
+        {
+            playerColliderComponent.enabled = true;
+            Debug.Log("Cheat Disabled");
+        }
     }
 }

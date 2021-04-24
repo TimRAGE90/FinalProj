@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
         TurnOff();
     }
 
-    //pause & quit action maps
+    //pause, quit, & cheat action maps
     private void OnEnable()
     {
         pauseAction = new PauseAction();
@@ -44,7 +44,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
             //c_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
         }
-
         else
         {
             Time.timeScale = 1;
@@ -67,6 +66,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         TurnOff();
         Cursor.visible = false;
+
     }
     public void About()
     {
@@ -81,7 +81,7 @@ public class PauseMenu : MonoBehaviour
     public void ReturnHub()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("HubLevel");      
+        SceneManager.LoadScene("HubLevel");
     }
 
 
