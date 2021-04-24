@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject intro;
 
-
+    PauseAction pauseAction;
     void Start()
     {
         animCam.SetActive(false);
@@ -44,6 +44,27 @@ public class MainMenu : MonoBehaviour
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));            
         }
     }
+
+    private void OnEnable()
+    {
+        pauseAction = new PauseAction();
+        pauseAction.UI.Pause.performed += _ => OnSkip();
+        pauseAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        pauseAction.Disable();
+    }
+
+    public void OnSkip()
+    {
+        if (isStarted == true)
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));              
+        }
+    }
+
 
     //button navigation
     public void Play()

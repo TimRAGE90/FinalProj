@@ -8,17 +8,6 @@ public class VolumeControl : MonoBehaviour
     public AudioMixer musicMixer;
     public AudioMixer soundMixer;
 
-
-
-    //Collider playerColliderComponent;
-    //public bool playerInvincibleCheat;
-
-    void Start()
-    {
-        //playerColliderComponent = GetComponent<BoxCollider>();
-        //playerInvincibleCheat = true;
-    }
-
     public void SetMusicLevel (float sliderValue)
     {
         musicMixer.SetFloat ("MusicVol", Mathf.Log10 (sliderValue) * 20);
@@ -33,14 +22,4 @@ public class VolumeControl : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
-
-
-    /*public void InvincibleCheat()
-    {
-        playerColliderComponent.enabled = !playerColliderComponent.enabled;
-        //if (playerInvincibleCheat == true)
-        //{
-            
-        //}
-    }*/
 }
