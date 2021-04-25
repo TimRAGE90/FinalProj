@@ -47,6 +47,7 @@ public class InputManager : MonoBehaviour
     Collider playerColliderComponent;
 
     PauseAction pauseAction;
+    public Text cheatText;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class InputManager : MonoBehaviour
         objCollider = obj.GetComponent<Collider>();
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
+        cheatText.text = " ";
        
         thrownObjectText.text = "Holding Ball";
 
@@ -268,12 +270,12 @@ public class InputManager : MonoBehaviour
         if (playerColliderComponent.enabled == true)
         {
             playerColliderComponent.enabled = false;
-            Debug.Log("Cheat Activated");
+            cheatText.text = "Invincible Mode ACTIVE";
         }
         else
         {
             playerColliderComponent.enabled = true;
-            Debug.Log("Cheat Disabled");
+            cheatText.text = " ";
         }
     }
 }

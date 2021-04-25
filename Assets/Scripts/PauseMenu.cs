@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pausePanel;
     public GameObject aboutPanel;
+    public GameObject optionsPanel;
 
 
     PauseAction pauseAction;
@@ -78,6 +79,12 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(true);
         aboutPanel.SetActive(false);
+        optionsPanel.SetActive(false);
+    }
+    public void Settings()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(true);
     }
     public void ReturnHub()
     {
@@ -91,5 +98,6 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         aboutPanel.SetActive(false);
+        optionsPanel.SetActive(false);
     }
 }
