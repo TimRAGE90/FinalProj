@@ -1,5 +1,5 @@
 {
-    "name": "PauseAction",
+    "name": "UIActions",
     "maps": [
         {
             "name": "UI",
@@ -17,14 +17,6 @@
                     "name": "Quit",
                     "type": "Button",
                     "id": "81ce6ee5-ea98-49ab-868f-6f96d1d906e1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Cheat",
-                    "type": "Button",
-                    "id": "5ed87aba-a713-488c-bfd8-a4ce8c1563b9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -50,17 +42,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Quit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2d672273-ebd2-410b-b432-ea37fb1e2327",
-                    "path": "<Keyboard>/m",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cheat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

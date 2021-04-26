@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 2026987864248273334}
   - component: {fileID: 2026987864248273335}
   - component: {fileID: 6696555253241395868}
-  - component: {fileID: 3557027679169785710}
+  - component: {fileID: 8488114769235776819}
   m_Layer: 11
   m_Name: Player 1
   m_TagString: Player
@@ -1622,11 +1622,11 @@ MonoBehaviour:
   isJumping: 0
   isCrouching: 0
   walkingSpeed: 5
-  runningSpeed: 7
+  runningSpeed: 15
   slidingSpeed: 10
   rotationSpeed: 15
   jumpHeight: 7
-  gravityIntensity: -30
+  gravityIntensity: -20
 --- !u!114 &6480682537161682185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,14 +1686,14 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 2349.4062
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1807,8 +1807,8 @@ MonoBehaviour:
   isWallRunning: 0
   orientation: {fileID: 6696555253227172738}
   jumpForce: 5
---- !u!65 &3557027679169785710
-BoxCollider:
+--- !u!136 &8488114769235776819
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1817,9 +1817,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29588813, y: 0.030488491, z: 0}
-  m_Center: {x: 0.0025335252, y: 0.77817583, z: 0.099684715}
+  m_Radius: 0.5
+  m_Height: 1.5658834
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0597197, z: 0}
 --- !u!1 &6499937961041759839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,11 +2916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 801cfe6eb6548f44988468eac444e8c1, type: 3}
       propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 801cfe6eb6548f44988468eac444e8c1, type: 3}
-      propertyPath: m_TagString
-      value: Ball
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801cfe6eb6548f44988468eac444e8c1, type: 3}

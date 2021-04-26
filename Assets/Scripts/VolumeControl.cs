@@ -5,21 +5,10 @@ using UnityEngine.Audio;
 
 public class VolumeControl : MonoBehaviour
 {
-    public AudioMixer musicMixer;
-    public AudioMixer soundMixer;
+    public AudioMixer mixer;
 
-    public void SetMusicLevel (float sliderValue)
+    public void SetLevel (float sliderValue)
     {
-        musicMixer.SetFloat ("MusicVol", Mathf.Log10 (sliderValue) * 20);
-    }
-
-    public void SetSoundLevel (float sliderValue)
-    {
-        soundMixer.SetFloat ("SoundVol", Mathf.Log10 (sliderValue) * 10);
-    }
-
-    public void SetFullscreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
+        mixer.SetFloat ("MusicVol", Mathf.Log10 (sliderValue) * 20);
     }
 }

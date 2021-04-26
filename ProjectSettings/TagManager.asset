@@ -22,7 +22,6 @@ TagManager:
   - Slide
   - Zombie
   - Jump
-  - Ball
   layers:
   - Default
   - TransparentFX
