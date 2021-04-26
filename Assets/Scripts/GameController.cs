@@ -64,5 +64,4 @@ public class GameController : MonoBehaviour
             Cursor.visible = true;
         }
     }
-    
 }

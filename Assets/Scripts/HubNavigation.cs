@@ -21,12 +21,17 @@ public class HubNavigation : MonoBehaviour
     public GameObject slidePanel;
     public GameObject zombiePanel;
 
+    AudioSource audioSource;
+    public AudioClip resetSound;
+    public AudioClip transSound;
+
 
     private void Awake()
     {
         levelOneWin = false;
         Disable();
         RemovePanels();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -35,26 +40,31 @@ public class HubNavigation : MonoBehaviour
         if(other.tag == "Door1")
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            Transition();
         }
 
         //transition to town level
         if(other.tag == "Door2")
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+            Transition();
         }
 
         //transition to scary level
         if(other.tag == "Door3")
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 3));
+            Transition();
         }
 
         //Hub's "death pit"
         if(other.tag =="HubPit")
         {
             transform.position = new Vector3(0, 0, 0);
+            PlaySound(resetSound);
         }
 
+        //UI triggers
         if (other.tag == "Forest")
         {
             forestPanel.SetActive(true);
@@ -97,6 +107,13 @@ public class HubNavigation : MonoBehaviour
         }
     }
 
+    //sound effect management
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
+    //disable UI instances
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "Forest" || other.tag == "NightTown" || other.tag == "Warehouse")
@@ -126,6 +143,11 @@ public class HubNavigation : MonoBehaviour
        slidePanel.SetActive(false);
        zombiePanel.SetActive(false);
    }
+
+   void Transition()
+  {
+      PlaySound(transSound);
+  }
 
     IEnumerator LoadLevel(int levelIndex)
     {

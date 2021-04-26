@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pausePanel;
     public GameObject aboutPanel;
+    public GameObject optionsPanel;
+
 
     PauseAction pauseAction;
 
@@ -19,7 +21,7 @@ public class PauseMenu : MonoBehaviour
         TurnOff();
     }
 
-    //pause & quit action maps
+    //pause, quit, & cheat action maps
     private void OnEnable()
     {
         pauseAction = new PauseAction();
@@ -44,7 +46,6 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = true;
             //c_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
         }
-
         else
         {
             Time.timeScale = 1;
@@ -67,21 +68,28 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         TurnOff();
         Cursor.visible = false;
+
     }
     public void About()
     {
         aboutPanel.SetActive(true);
-        TurnOff();
+        pausePanel.SetActive(false);
     }
     public void Back()
     {
         pausePanel.SetActive(true);
         aboutPanel.SetActive(false);
+        optionsPanel.SetActive(false);
+    }
+    public void Settings()
+    {
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(true);
     }
     public void ReturnHub()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("HubLevel");      
+        SceneManager.LoadScene("HubLevel");
     }
 
 
@@ -89,5 +97,7 @@ public class PauseMenu : MonoBehaviour
     void TurnOff()
     {
         pausePanel.SetActive(false);
+        aboutPanel.SetActive(false);
+        optionsPanel.SetActive(false);
     }
 }
