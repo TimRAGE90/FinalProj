@@ -31,6 +31,7 @@ public class InputManager : MonoBehaviour
     AudioSource audioSource;
     //public AudioClip mainmusic;
 
+
     [Header("Throw")]
     public bool throw_input;
     public bool return_input;
@@ -43,6 +44,11 @@ public class InputManager : MonoBehaviour
     public Transform target;
     public Transform curvePoint;
 
+    Collider playerColliderComponent;
+
+    PauseAction pauseAction;
+    public Text cheatText;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
@@ -50,6 +56,7 @@ public class InputManager : MonoBehaviour
         objCollider = obj.GetComponent<Collider>();
         objCollider.enabled = !objCollider.enabled;
         obj.isKinematic = true;
+        cheatText.text = " ";
        
         thrownObjectText.text = "Holding Ball";
 
@@ -61,6 +68,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         TimerController.instance.BeginTimer();
+        playerColliderComponent = GetComponent<BoxCollider>();
     }
 
     private void OnEnable()
@@ -86,6 +94,11 @@ public class InputManager : MonoBehaviour
             //Jump
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             
+
+            //action map code to activate invincible cheat        
+            pauseAction = new PauseAction();
+            pauseAction.UI.Cheat.performed += _ => InvincibleCheat();
+            pauseAction.Enable();
         }
 
         playerControls.Enable();
@@ -94,6 +107,7 @@ public class InputManager : MonoBehaviour
     private void OnDisable()
     {
         playerControls.Disable();
+        pauseAction.Disable();
     }
 
     public void HandleAllInputs()
@@ -247,6 +261,21 @@ public class InputManager : MonoBehaviour
             Cursor.visible = true;
             TimerController.instance.EndTimer();
             Destroy(other.gameObject);
+        }
+    }
+
+    //push M key to activate invincible cheat
+    public void InvincibleCheat()
+    {
+        if (playerColliderComponent.enabled == true)
+        {
+            playerColliderComponent.enabled = false;
+            cheatText.text = "Invincible Mode ACTIVE";
+        }
+        else
+        {
+            playerColliderComponent.enabled = true;
+            cheatText.text = " ";
         }
     }
 }
