@@ -969,8 +969,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161442470}
   m_LocalRotation: {x: -1, y: -0, z: 0, w: 0}
-  m_LocalPosition: {x: 25.778002, y: 0.5526998, z: 65.619995}
-  m_LocalScale: {x: 10.191645, y: 1.899015, z: 0.86022043}
+  m_LocalPosition: {x: 25.778002, y: 0.72, z: 65.619995}
+  m_LocalScale: {x: 10.191645, y: 1.6843313, z: 0.86022043}
   m_Children: []
   m_Father: {fileID: 1294250284}
   m_RootOrder: 13
@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195681773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.9, y: -36.5, z: 58.2}
+  m_LocalPosition: {x: 47.9, y: -37, z: 58.2}
   m_LocalScale: {x: 0.83519, y: 0.83519, z: 0.83519}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 314998164}
   - component: {fileID: 314998163}
   m_Layer: 5
-  m_Name: NightTown_Text (TMP)
+  m_Name: NightCity_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NIGHT TOWN
+  m_text: NIGHT CITY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
   m_sharedMaterial: {fileID: -6879936051226478001, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 404705108}
   - component: {fileID: 404705107}
   m_Layer: 5
-  m_Name: Warehouse_Text (TMP)
+  m_Name: ShipCenter_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE WAREHOUSE
+  m_text: SHIPPING CENTER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
   m_sharedMaterial: {fileID: -6879936051226478001, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.9
+  m_fontSize: 61.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3733,7 +3733,7 @@ GameObject:
   - component: {fileID: 617339606}
   - component: {fileID: 617339607}
   m_Layer: 0
-  m_Name: Warehouse_GameObject
+  m_Name: ShippingCenter_GameObject
   m_TagString: Warehouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3823,7 +3823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Hand is hazardous. Avoid at all costs.
+  m_text: Zombies will hurt you. Avoid as much as possible.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
   m_sharedMaterial: {fileID: -6879936051226478001, guid: 3663996aea69dc049acc8d5db19ebd8c, type: 2}
@@ -7192,7 +7192,7 @@ GameObject:
   - component: {fileID: 1095039737}
   - component: {fileID: 1095039738}
   m_Layer: 0
-  m_Name: NightTown_GameObject
+  m_Name: NightCity_GameObject
   m_TagString: NightTown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7745,8 +7745,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187569879}
   m_LocalRotation: {x: -0.7043494, y: -0, z: 0.7098535, w: 0}
-  m_LocalPosition: {x: 19.471003, y: 0.28300023, z: 52.196}
-  m_LocalScale: {x: 6.4183574, y: 1.6770581, z: 0.86022043}
+  m_LocalPosition: {x: 19.47, y: 0.44, z: 52.06}
+  m_LocalScale: {x: 6.6661057, y: 1.4811945, z: 0.86022043}
   m_Children: []
   m_Father: {fileID: 1294250284}
   m_RootOrder: 35
@@ -9049,7 +9049,7 @@ GameObject:
   - component: {fileID: 1398679872}
   - component: {fileID: 1398679873}
   m_Layer: 0
-  m_Name: HandControls
+  m_Name: ZombieControls
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13131,7 +13131,7 @@ GameObject:
   - component: {fileID: 2053531124}
   - component: {fileID: 2053531123}
   m_Layer: 5
-  m_Name: NightTown_Panel
+  m_Name: NightCity_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
